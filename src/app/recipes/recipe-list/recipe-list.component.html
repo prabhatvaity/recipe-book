@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12" *ngIf="!recipesFetched">
+    <h3 style="text-align: center;">Loading!</h3>
+  </div>
+  <div class="col-xs-12" *ngIf="recipes.length else errMsg" >
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes; let i = index"
+      [recipe]="recipeEl"
+      [index]="i"></app-recipe-item>
+  </div>
+  <ng-template  #errMsg>
+    <div class="col-xs-12" *ngIf="recipesFetched&& !recipes.length">
+      <h3 style="text-align: center;">No Recipes Found!</h3>
+    </div>
+  </ng-template>
+
+</div>
+
