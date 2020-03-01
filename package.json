@@ -2,25 +2,25 @@
   "name": "recipe-book",
   "version": "0.0.0",
   "engines": {
-    "node": "v12.13.1",
+    "node": "12.13.1",
     "npm": "6.12.1"
   },
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path recipe-book --aot --prod"
+    "postinstall": "ng build --aot --prod",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.14",
     "@angular/cli": "~8.3.20",
+    "@angular/compiler-cli": "~8.2.14",
+    "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
-    "@angular/compiler-cli": "~8.2.14",
     "@angular/core": "~8.2.14",
     "@angular/forms": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
