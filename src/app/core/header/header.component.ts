@@ -13,7 +13,7 @@ export class HeaderComponent {
   onSaveData() {
     return this.dataStorageService.storeRecipes()
       .subscribe(
-        (response: Response) => {
+        (response) => {
           console.log(response);
         }, (error => console.log(error))
       );
