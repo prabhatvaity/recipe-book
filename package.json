@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "bootstrap": "^3.4.1",
-    "express": "^4.17.1",
+    "express": "^6.12.1",
     "firebase": "^7.9.1",
     "g": "^2.0.1",
     "heroku": "^7.38.2",
