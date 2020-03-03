@@ -2,10 +2,10 @@ import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/com
 import {Observable} from 'rxjs';
 import {tap} from 'rxjs/operators';
 
-export class LoggingInterceptor implements HttpInterceptor{
+export class LoggingInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(tap(
-      event =>{
+      event => {
         console.log('Logging Interceptor', event);
       }
     ));
