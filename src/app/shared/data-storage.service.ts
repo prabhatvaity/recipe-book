@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpParams, HttpRequest} from '@angular/common/http';
 import {RecipeService} from '../recipes/recipe.service';
 import {Recipe} from '../recipes/recipe.model';
 import {AuthService} from '../auth/auth.service';
+import {HttpClient, HttpRequest} from '@angular/common/http';
 
 @Injectable()
 export class DataStorageService {
@@ -12,7 +12,6 @@ export class DataStorageService {
   }
 
   storeRecipes() {
-    const token = this.authService.getToken();
     // const params = new HttpParams().set('auth', token);
     // return this.http.put(this.dbUrl, this.recipeService.getRecipes(),{
     //   observe: 'body',
@@ -20,13 +19,12 @@ export class DataStorageService {
     // });
 
     // progress bar
-    const req = new HttpRequest('PUT', this.dbUrl, this.recipeService.getRecipes(),{
+    const req = new HttpRequest('PUT', this.dbUrl, this.recipeService.getRecipes(), {
       reportProgress: true
     });
     return this.http.request(req);
   }
   fetchRecipes() {
-    const token = this.authService.getToken();
     return this.http.get<Recipe[]>(this.dbUrl)
       .subscribe(response => {
         const recipes: Recipe[] = response ? response : [];
