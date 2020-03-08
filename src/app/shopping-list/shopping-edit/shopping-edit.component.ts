@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
+import {Store} from '@ngrx/store';
 import {Subscription} from 'rxjs';
 import { Ingredient } from '../../shared/ingredient.model';
-import {Store} from '@ngrx/store';
 import * as SLActions from '../store/shopping-list.actions';
 import * as fromApp from '../../store/app.reducers';
 @Component({

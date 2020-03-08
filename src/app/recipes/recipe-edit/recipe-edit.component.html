@@ -35,7 +35,7 @@
         <div class="col-xs-12" formArrayName="ingredients">
           <button class="btn btn-primary" type="button" (click)="onAddIngredient()">Add ingredients</button>
           <div class="row" style="margin-top: 10px;"
-               *ngFor="let ingredientCtrl of recipeForm.get('ingredients').value; let i = index;"
+               *ngFor="let ingredientCtrl of getControls(); let i = index"
                [formGroupName]="i">
             <div class="col-xs-8">
               <input type="text"
