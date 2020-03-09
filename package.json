@@ -8,6 +8,7 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
+    "start": "node dist/server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
