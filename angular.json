@@ -51,7 +51,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/server",
+            "outputPath": "dist/recipe-book-pv",
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json"
           }

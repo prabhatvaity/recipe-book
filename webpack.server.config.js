@@ -7,7 +7,13 @@ module.exports = {
     server: './server.ts',
   },
   target: 'node',
-  resolve: { extensions: ['.ts', '.js'] },
+  resolve: {
+    alias: {
+      ['firebase/app']: path.resolve(__dirname, 'node_modules/firebase/app/dist/index.cjs.js'),
+      ['firebase']: path.resolve(__dirname, 'node_modules/firebase/dist/index.node.cjs.js')
+    },
+    extensions: ['.ts', '.js']
+  },
   optimization: {
     minimize: false
   },
